@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Dan Kubb"]
-  s.date = %q{2010-02-02}
+  s.date = %q{2010-02-04}
   s.description = %q{MySQL Adapter for DataMapper}
   s.email = %q{dan.kubb@gmail.com}
   s.extra_rdoc_files = [
@@ -20,6 +20,8 @@ Gem::Specification.new do |s|
      "Rakefile",
      "VERSION",
      "dm-mysql-adapter.gemspec",
+     "lib/mysql_adapter.rb",
+     "lib/mysql_adapter/adapter.rb",
      "spec/adapter_spec.rb",
      "spec/rcov.opts",
      "spec/spec.opts",
@@ -43,12 +45,14 @@ Gem::Specification.new do |s|
       s.add_runtime_dependency(%q<data_objects>, ["~> 0.10.1"])
       s.add_runtime_dependency(%q<do_mysql>, ["~> 0.10.1"])
       s.add_runtime_dependency(%q<dm-core>, ["~> 0.10.3"])
+      s.add_runtime_dependency(%q<dm-data_objects-adapter>, ["~> 0.10.3"])
       s.add_development_dependency(%q<rspec>, ["~> 1.3"])
       s.add_development_dependency(%q<yard>, ["~> 0.5"])
     else
       s.add_dependency(%q<data_objects>, ["~> 0.10.1"])
       s.add_dependency(%q<do_mysql>, ["~> 0.10.1"])
       s.add_dependency(%q<dm-core>, ["~> 0.10.3"])
+      s.add_dependency(%q<dm-data_objects-adapter>, ["~> 0.10.3"])
       s.add_dependency(%q<rspec>, ["~> 1.3"])
       s.add_dependency(%q<yard>, ["~> 0.5"])
     end
@@ -56,6 +60,7 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<data_objects>, ["~> 0.10.1"])
     s.add_dependency(%q<do_mysql>, ["~> 0.10.1"])
     s.add_dependency(%q<dm-core>, ["~> 0.10.3"])
+    s.add_dependency(%q<dm-data_objects-adapter>, ["~> 0.10.3"])
     s.add_dependency(%q<rspec>, ["~> 1.3"])
     s.add_dependency(%q<yard>, ["~> 0.5"])
   end
