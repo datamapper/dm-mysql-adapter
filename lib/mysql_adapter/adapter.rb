@@ -1,7 +1,3 @@
-require DataMapper.root / 'lib' / 'dm-core' / 'adapters' / 'data_objects_adapter'
-
-require 'do_mysql'
-
 module DataMapper
   module Adapters
     class MysqlAdapter < DataObjectsAdapter
