@@ -1,7 +1,13 @@
+require 'do_mysql'
+require 'dm-do-adapter'
+
 module DataMapper
   module Adapters
+
     class MysqlAdapter < DataObjectsAdapter
+
       module SQL #:nodoc:
+
         IDENTIFIER_MAX_LENGTH = 64
 
         private
@@ -28,11 +34,14 @@ module DataMapper
         def quote_name(name)
           "`#{name[0, self.class::IDENTIFIER_MAX_LENGTH].gsub('`', '``')}`"
         end
-      end #module SQL
+
+      end
 
       include SQL
-    end # class MysqlAdapter
+
+    end
 
     const_added(:MysqlAdapter)
-  end # module Adapters
-end # module DataMapper
+
+  end
+end
