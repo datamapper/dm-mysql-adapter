@@ -9,8 +9,6 @@ require 'dm-mysql-adapter/spec/setup'
 ENV['ADAPTER']          = 'mysql'
 ENV['ADAPTER_SUPPORTS'] = 'all'
 
-DataMapper::Spec.setup
-
 describe "DataMapper::Adapters::MysqlAdapter" do
 
   before :all do
